@@ -15,7 +15,10 @@ final balance: 1320.68
 """
 
 def isDiv(divisor,divident):
-    pass
+    if divisor % divident == 0:
+        return True
+    else:
+        return False
 
 
 assert isDiv(4,2) == True

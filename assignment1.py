@@ -20,7 +20,12 @@ Your recipe:
 """
 import random
 
-def randomIngredient():
-    pass  # Replace this line with your code
+def randomIngredient(ingredients):
+    for i in range(5):
+        rec = ingredients.pop(random.randint(0,len(ingredients)-1))
+        print(f"{random.randint(1,10)} cups of {rec}")
+
 
 # your code
+ingredients = ['Sugar', 'Butter','Salt','Milk','Cinnamon','Cocoa powder','Baking Powder']
+randomIngredient(ingredients)
