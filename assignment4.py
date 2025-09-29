@@ -18,10 +18,11 @@ def get_integer_input():
             return int(num)
 def factorise(number):
     lfactor =[]
+    #onumber = number
     number = int(number)
     prime = False
     while prime == False:
-        for i in range(2, number+1):
+        for i in range(2, int(number**0.5)):
             if i == number:
                 prime = True 
                 lfactor.append(i)
@@ -36,4 +37,10 @@ def factorise(number):
        
         
 
-print(f"The factors are: {factorise(get_integer_input())}")
+input = int(input("Enter integer: "))
+start = time.time()
+pass
+print(f"The factors are: {factorise(input)}")
+end = time.time()
+elapsed = end-start
+print(elapsed)
